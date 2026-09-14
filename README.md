@@ -1,5 +1,19 @@
 How to run the application:
-npm run dev
+Set up a new Convex project
+
+- npx convex dev
+
+Make GitHub OAuth app - Settings -> Developer settings -> OAuth Apps -> New OAuth App
+
+- Any application name, homepage URL http://localhost:5173, redirect URI https://convex-name-123.convex.site
+- Make a new client secret on the OAuth settings, and copy the client ID and client secret
+- npx convex env set AUTH_GITHUB_ID (client ID)
+- npx convex env set AUTH_GITHUB_SECRET (client secret)
+- npx convex env set SITE_URL http://localhost:5173
+
+Run the app
+
+- npm run dev
 
 Additionally, can see the deployed website - https://scho324.github.io/todo-tasks/
 
