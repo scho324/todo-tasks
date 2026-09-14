@@ -3,7 +3,7 @@ name: Deploy Vite app to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - main
 
 permissions:
   contents: read
@@ -37,9 +37,9 @@ jobs:
         run: pnpm install
 
       - name: Build with Vite
-        run: npx convex deploy --cmd 'pnpm run build'
+        run: pnpm run build
         env:
-          CONVEX_DEPLOY_KEY: ${{ secrets.VITE_CONVEX_URL }}
+          VITE_CONVEX_URL: ${{ secrets.VITE_CONVEX_URL}}
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
