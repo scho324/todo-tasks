@@ -4,8 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
+  base: "/todo-tasks/",
   plugins: [react(), tailwindcss()],
-  base: "/OOSE-HW1/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
